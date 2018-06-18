@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\bin\Debug\Infrastructure.exe.config
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\bin\Debug\Infrastructure.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\obj\Debug\Infrastructure.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Infrastructure\obj\Debug\Infrastructure.pdb
