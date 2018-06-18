@@ -1,0 +1,53 @@
+﻿@using WebApplication.Models;
+
+@model IEnumerable<WebApplication.Models.Log>
+
+
+@{
+    ViewBag.Title = "Logs";
+}
+<h2>@ViewBag.Title.</h2>
+
+<div>
+    @using (Html.BeginForm("Logs", "Logs", FormMethod.Post))
+    {
+
+        <div>
+            <br />
+            @Html.DropDownList("typeFilter",
+                                       new SelectList(Enum.GetValues(typeof(EntryType))),
+                                       "Log entry type",
+                                       new { @class = "form-control" })
+            <br />
+            <input type="submit" id="submitId" value="Filter" class="btn-info" />
+
+        </div>
+
+    }
+
+</div>
+
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+        </tr>
+    }
+
+</table>

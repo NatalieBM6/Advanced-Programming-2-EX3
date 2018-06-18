@@ -1,0 +1,18 @@
+﻿@model WebApplication.Models.Photo
+
+@{
+    ViewBag.Title = "FullScreenImageView";
+}
+
+<h2>FullScreenImageView</h2>
+
+<br />
+<p>Name: @Model.Name</p>
+<p>
+    Date: @Model.Month/@Model.Year
+    <a href="@Url.Action("Photos")" class="btn btn-info btn-xs" role="button">Return To Images</a>
+    <a href="@Url.Action("DeletePhoto", new { image = Model.FullPath, thumbnail = Model.FullThumbPath})" id="btnDelete"
+       class="btn btn-danger btn-xs" role="button">Delete</a>
+</p>
+
+<img src="@Url.Content(Model.RelativePath)">

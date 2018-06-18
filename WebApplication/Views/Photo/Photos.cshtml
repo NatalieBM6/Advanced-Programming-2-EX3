@@ -1,0 +1,41 @@
+﻿@using WebApplication.Models
+@model WebApplication.Models.PhotoModel
+
+@{
+    ViewBag.Title = "Photos";
+}
+
+<h2>Photos</h2>
+
+<div class="container" id="tourpackages-carousel">
+    <div class="row">
+        @foreach (Photo photoInfo in Model.Thumbnails)
+        {
+            string relativeThumbnailPath = "../Images/" + Photo.AbsoluteToRelativePath(photoInfo.FullThumbPath, Server.MapPath("~/Images/"));
+            string relativeImagePath = "../Images/" + Photo.AbsoluteToRelativePath(photoInfo.FullPath, Server.MapPath("~/Images/"));
+            photoInfo.RelativePath = relativeImagePath;
+            photoInfo.RelativeThumbPath = relativeThumbnailPath;
+        <div class="col-sm-3 col-sm-3 col-sm-3 col-sm-3">
+            <img src="@Url.Content(relativeThumbnailPath)" alt="" class="img-circle" width="242" height="200">
+
+            <div align="center">
+                <span class="d-inline-block text-truncate font-weight-bold" style="font-size: large; max-width: 200px;">@photoInfo.Name</span>
+                <p>@photoInfo.GetCreationDate(photoInfo)</p>
+                <p>
+                    <a href="@Url.Action("FullScreenImageView", new { picture = photoInfo.RelativePath})"
+                       id="btnView" class="btn btn-info btn-xs" role="button">View</a>
+
+                    <a href="@Url.Action("DeleteImageView", new { picture = photoInfo.RelativePath})" id="btnDelete"
+                       class="btn btn-danger btn-xs" role="button">Delete</a>
+                </p>
+
+
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+
+
+<!---->

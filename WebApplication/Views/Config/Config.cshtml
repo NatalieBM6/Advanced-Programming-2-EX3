@@ -1,0 +1,67 @@
+﻿@model WebApplication.Models.ConfigModel
+
+@{
+    ViewBag.Title = "Config";
+}
+
+@using (Html.BeginForm())
+{
+<div class="form-horizontal">
+    <h3>Config Settings</h3>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <table class="table">
+        <tr>
+            <td>
+                <h4> OutPut Directory</h4>
+            </td>
+            <td>
+                @ViewBag.OutPutDir
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Source Name</h4>
+            </td>
+            <td>
+                @ViewBag.SourceName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Log Name</h4>
+            </td>
+            <td>
+                @ViewBag.LogName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Thumbnail Size</h4>
+            </td>
+            <td>
+                @ViewBag.ThumbnailSize
+            </td>
+        </tr>
+
+    </table>
+
+    <h4>handlers</h4>
+
+
+<table class="table">
+
+    @foreach (var item in Model.Handlers)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(@item, "DeleteHandler", new { toBeDeletedHandler = item })
+
+            </td>
+        </tr>
+    }
+</table>
+
+
+</div>
+}
+

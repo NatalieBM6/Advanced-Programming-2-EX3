@@ -1,0 +1,27 @@
+﻿@model WebApplication.Models.Photo
+
+
+@{
+    ViewBag.Title = "DeleteImageView";
+}
+
+<h2>Delete Image View</h2>
+<br />
+<h3>Are you sure you want to delete this photo?</h3>
+<p>
+    <a href="@Url.Action("Photos")" class="btn btn-info btn-xs" role="button">No</a>
+    <a href="@Url.Action("DeletePhoto", new { image = Model.FullPath, thumbnail = Model.FullThumbPath})"
+       class="btn btn-danger btn-xs" role="button">Yes</a>
+
+
+
+</p>
+
+<h4>Name: @Model.Name</h4>
+<h4>Date: @Model.Month/@Model.Year</h4>
+
+<img src="@Url.Content(Model.RelativePath)">
+<br />
+<br />
+
+

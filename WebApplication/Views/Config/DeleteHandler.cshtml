@@ -1,0 +1,18 @@
+﻿@model WebApplication.Models.ConfigModel
+
+@{
+    ViewBag.Title = "Confirm";
+
+}
+
+<h2>Are you sure you want to delete the handler?</h2>
+<h3>@Model.ToBeDeletedHandler</h3>
+
+<p>
+    <a href="@Url.Action("Config")" class="btn btn-info btn-xs" role="button">Cancel</a>
+    <a href="@Url.Action("DeleteOK", new { })"
+       class="btn btn-danger btn-xs" role="button">Ok</a>
+
+
+
+</p>

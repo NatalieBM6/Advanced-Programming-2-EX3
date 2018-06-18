@@ -1,2 +1,2 @@
-# Advanced-Programming-2-EX3
-The 3rd task of the "Advanced Programming 2" course.
+# AP3
+בתרגיל זה נבנה אפליקציית web באמצעות MVC5 - RAZOR 

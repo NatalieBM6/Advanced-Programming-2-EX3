@@ -1,0 +1,20 @@
+﻿@model WebApplication.Models.ImageWeb
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Server Status: @ViewBag.ServerStatus</h2>
+<h2>Amount Images in Output Dir: @ViewBag.amountImages</h2>
+
+<table class="table">
+    <tr>
+        <td>Student Names</td>
+        <th>@ViewBag.FirstName</th>
+        <th>@ViewBag.SecondName</th>
+    </tr>
+    <tr>
+        <td>Student Ids</td>
+        <th>@ViewBag.FirstId</th>
+        <th>@ViewBag.SecondId</th>
+    </tr>
+</table>
