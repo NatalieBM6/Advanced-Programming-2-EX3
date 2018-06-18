@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Communication.exe.config
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Communication.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Communication.pdb
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Infrastructure.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Logging.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Infrastructure.pdb
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Infrastructure.exe.config
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Logging.pdb
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Logging.exe.config
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\obj\Debug\Communication.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\obj\Debug\Communication.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\obj\Debug\Communication.csproj.CopyComplete
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\obj\Debug\Communication.exe
+C:\Users\user\Desktop\AP2\tal_proj\ImageService\Communication\obj\Debug\Communication.pdb

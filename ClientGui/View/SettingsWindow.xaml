@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="ClientGui.View.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientGui.View"
+        d:DataContext="ClientGui.ViewModel.SettingsViewModel"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Settings" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="36"
+               Width="auto" Height="auto"/>
+            <Grid TextBlock.FontSize="20" Margin="0,0,0,0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Padding="3" Margin="3">Output Directory:</TextBlock>
+                <TextBlock x:Name="txtMazeName" Grid.Column="2" Padding="3" Margin="3" Text="{Binding OutputDir}"></TextBlock>
+                <TextBlock Grid.Row="1" Padding="3" Margin="3">Source Name:</TextBlock>
+                <TextBlock x:Name="txtRows" Grid.Row="1" Grid.Column="2" Padding="3" Margin="3" Text="{Binding SourceName}"></TextBlock>
+                <TextBlock Grid.Row="2" Padding="3" Margin="3">Log Name:</TextBlock>
+                <TextBlock x:Name="txtCols" Grid.Row="2" Grid.Column="2" Padding="3" Margin="3" Text="{Binding LogName}"></TextBlock>
+                <TextBlock Grid.Row="3" Padding="3" Margin="3">Thumbnail Size:</TextBlock>
+                <TextBlock x:Name="txtCol2s" Grid.Row="3" Grid.Column="2" Padding="3" Margin="3" Text="{Binding ThumbnailSize}"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Button x:Name="btnRemove"  Command="{Binding RemoveHandler}" FontSize="20"
+                        Width="auto" Grid.ColumnSpan="2" Margin="0,5" Padding="5" AutomationProperties.AutomationId="btnDeleteUser"
+                        >Remove Handler</Button>
+            </Grid>
+            <Grid Grid.Row="3"  Grid.Column="0">
+                <ListBox Name ="handlersList" ItemsSource="{Binding Handlers}" SelectedItem="{Binding SelectedHandler}"/>
+            </Grid>
+        </Grid>
+    </StackPanel>
+</UserControl>
